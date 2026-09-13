@@ -1,1 +1,276 @@
- 
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#1f6f43" />
+  <title>Ramer Soccer | Team 36</title>
+  <style>
+    :root {
+      --green: #1f6f43;
+      --green-dark: #155232;
+      --cream: #f7f5ef;
+      --white: #ffffff;
+      --text: #1d2620;
+      --muted: #68726c;
+      --line: #dde4df;
+      --shadow: 0 8px 28px rgba(0,0,0,.08);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--cream);
+      color: var(--text);
+    }
+
+    .hero {
+      background: linear-gradient(135deg, var(--green-dark), var(--green));
+      color: white;
+      padding: 46px 20px 56px;
+      text-align: center;
+    }
+
+    .hero .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: .14em;
+      font-size: .78rem;
+      opacity: .85;
+      font-weight: 700;
+    }
+
+    .hero h1 {
+      margin: 8px 0 4px;
+      font-size: clamp(2rem, 8vw, 3.4rem);
+      line-height: 1;
+    }
+
+    .hero p {
+      margin: 8px 0 0;
+      font-size: 1.05rem;
+      opacity: .92;
+    }
+
+    main {
+      max-width: 900px;
+      margin: -28px auto 48px;
+      padding: 0 16px;
+    }
+
+    .card {
+      background: var(--white);
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .section-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 22px 22px 14px;
+    }
+
+    .section-head h2 {
+      margin: 0;
+      font-size: 1.35rem;
+    }
+
+    .section-head span {
+      color: var(--muted);
+      font-size: .9rem;
+    }
+
+    .schedule {
+      display: grid;
+      gap: 0;
+    }
+
+    .game {
+      display: grid;
+      grid-template-columns: 1.05fr 1fr .7fr 1.25fr;
+      gap: 12px;
+      align-items: center;
+      padding: 18px 22px;
+      border-top: 1px solid var(--line);
+    }
+
+    .label {
+      display: none;
+      color: var(--muted);
+      font-size: .75rem;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      margin-bottom: 2px;
+    }
+
+    .date {
+      font-weight: 800;
+      font-size: 1.05rem;
+    }
+
+    .time, .field, .opponent {
+      font-weight: 600;
+    }
+
+    .field {
+      text-align: center;
+    }
+
+    .snacks {
+      margin-top: 20px;
+      padding: 24px;
+      background: white;
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .snacks h2 {
+      margin: 0 0 5px;
+      font-size: 1.3rem;
+    }
+
+    .snacks p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 18px;
+      background: var(--green);
+      color: white;
+      text-decoration: none;
+      border-radius: 999px;
+      font-weight: 800;
+      white-space: nowrap;
+      transition: transform .15s ease, background .15s ease;
+    }
+
+    .btn:hover {
+      background: var(--green-dark);
+      transform: translateY(-1px);
+    }
+
+    footer {
+      text-align: center;
+      color: var(--muted);
+      padding: 0 16px 30px;
+      font-size: .85rem;
+    }
+
+    @media (max-width: 650px) {
+      .game {
+        grid-template-columns: 1fr 1fr;
+        gap: 14px 20px;
+      }
+
+      .label { display: block; }
+      .field { text-align: left; }
+
+      .snacks {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="eyebrow">1st &amp; 2nd Grade Boys Soccer</div>
+    <h1>Team Schlabach</h1>
+    <p>Team 36</p>
+  </header>
+
+  <main>
+    <section class="card" aria-labelledby="schedule-title">
+      <div class="section-head">
+        <h2 id="schedule-title">Game Schedule</h2>
+        <span>Fall 2026</span>
+      </div>
+
+      <div class="schedule">
+        <div class="game">
+          <div><span class="label">Date</span><div class="date">Sept 19</div></div>
+          <div><span class="label">Time</span><div class="time">11:00 AM</div></div>
+          <div><span class="label">Field</span><div class="field">7</div></div>
+          <div><span class="label">Opponent</span><div class="opponent">Norwayne</div></div>
+        </div>
+
+        <div class="game">
+          <div><span class="label">Date</span><div class="date">Sept 26</div></div>
+          <div><span class="label">Time</span><div class="time">5:00 PM</div></div>
+          <div><span class="label">Field</span><div class="field">7</div></div>
+          <div><span class="label">Opponent</span><div class="opponent">Chippewa</div></div>
+        </div>
+
+        <div class="game">
+          <div><span class="label">Date</span><div class="date">Oct 3</div></div>
+          <div><span class="label">Time</span><div class="time">12:00 PM</div></div>
+          <div><span class="label">Field</span><div class="field">7</div></div>
+          <div><span class="label">Opponent</span><div class="opponent">Norwayne</div></div>
+        </div>
+
+        <div class="game">
+          <div><span class="label">Date</span><div class="date">Oct 10</div></div>
+          <div><span class="label">Time</span><div class="time">2:30 PM</div></div>
+          <div><span class="label">Field</span><div class="field">8</div></div>
+          <div><span class="label">Opponent</span><div class="opponent">Loudonville</div></div>
+        </div>
+
+        <div class="game">
+          <div><span class="label">Date</span><div class="date">Oct 17</div></div>
+          <div><span class="label">Time</span><div class="time">2:00 PM</div></div>
+          <div><span class="label">Field</span><div class="field">7</div></div>
+          <div><span class="label">Opponent</span><div class="opponent">Dalton</div></div>
+        </div>
+
+        <div class="game">
+          <div><span class="label">Date</span><div class="date">Oct 24</div></div>
+          <div><span class="label">Time</span><div class="time">5:00 PM</div></div>
+          <div><span class="label">Field</span><div class="field">7</div></div>
+          <div><span class="label">Opponent</span><div class="opponent">Orrville</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="snacks">
+      <div>
+        <h2>Team Snacks</h2>
+        <p>Parents can use the link below to choose a game and sign up to bring snacks.</p>
+      </div>
+      <!-- Replace the # below with your actual snack sign-up URL -->
+      <a class="btn" href="https://www.signupgenius.com/go/70A0B4DA4AE2AA3F58-65815569-soccer" target="_blank" rel="noopener" id="snack-link">Snack Sign-Up</a>
+    </section>
+
+    <section class="snacks">
+      <div>
+        <h2>Soccer Resources</h2>
+        <p>View the full league schedule or open the Wooster Soccer Complex field map.</p>
+      </div>
+      <div style="display:flex; gap:10px; flex-wrap:wrap; width:100%; justify-content:flex-end;">
+        <a class="btn" href="https://docs.google.com/spreadsheets/d/e/2PACX-1vSJuAalz774eznxCy1uiHN9L2oMaTvkY0g_2wcwXVPKDal0SoIvv_z2XbwN-DNHGszA0LhCPtS05MSl/pubhtml#gid=1513717998" target="_blank" rel="noopener">Full Soccer Schedule</a>
+        <a class="btn" href="field-map.pdf" target="_blank" rel="noopener">Field Map</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Team 36 · 1st &amp; 2nd Grade Boys Soccer
+  </footer>
+
+
+</body>
+</html>
